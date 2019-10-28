@@ -1,0 +1,15 @@
+::ng-deep .mat-snack-bar-container {
+    text-align: center;
+}
+
+.close{
+    float: right;
+    cursor: pointer;
+  }
+  
+.close:hover{
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    opacity: 0.3;
+  }

@@ -1,0 +1,18 @@
+<div class="table-doctagversions-wrap">
+  <i class="material-icons" id="close-icon" (click)="onNoClick()">close</i>
+  <table class="table-doctagversions">
+    <thead>
+        <tr>
+            <td>Version</td>
+            <td>Release Date</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let version of docTagVersions">
+            <td>{{ version.Name }}</td>
+            <td>{{ toHumanDate(version.ReleaseDate) }}</td>
+        </tr>
+    </tbody>
+  </table> 
+</div>
+

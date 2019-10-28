@@ -1,0 +1,97 @@
+<div fxLayout="column" fxLayoutAlign="space-around center">
+
+  <div class="langs">
+    <button class="langEn" mat-raised-button (click)="changeLang('EN')">EN</button>
+    <button class="langLt" mat-raised-button (click)="changeLang('LT')">LT</button>
+  </div>
+
+  <div class="search-bar-wraper" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+    <form class="example-form">
+      <mat-form-field class="search-bar" appearance="outline">
+        <span matPrefix><i class="material-icons">search</i></span>
+        <input type="text" placeholder="{{'search' | translate }}" aria-label="Doctags" matInput
+          [formControl]="myControl" [matAutocomplete]="auto" fxFlex>
+        <mat-autocomplete (optionSelected)="showTopic($event)" #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option.Title}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <button class="add-doctag-button" mat-flat-button color="primary" (click)="showDoctagFormDialog()" fxFlex><i
+        class="material-icons">add</i>{{'addDoctag' | translate}}</button>
+  </div>
+
+  <div class="hero-wrap" fxLayout="column" fxLayoutAlign="space-between center" fxFlex>
+    <div class="hero-text" *ngIf="!selectedDoctagId" fxFlex>
+      <h1>Welcome to DUMP Admin Panel</h1>
+      <p>Search, edit, and add to the biggest documentation library in the world!<br><br>
+        Future of programming on this planet depends on you my friend. Generations
+        of newbies will be forever grateful and praise your name.</p>
+    </div>
+    <div class="hero-image" *ngIf="!selectedDoctagId" fxFlex>
+      <img src="../../../assets/power.svg" alt="">
+    </div>
+  </div>
+
+  <div class="show-doctags-wraper" *ngIf="selectedDoctagId" fxLayout="row" fxLayoutAlign="space-between center" fxFlex>
+    <h1 class="selected-topic-h1" fxFlex> {{ this.selectedDoctagTitle }} </h1>
+    <button class="add-topic-button" mat-stroked-button (click)="showTopicFormDialog()" fxFlex><i
+        class="material-icons">add</i>{{'addTopic' | translate}}</button>
+    <!-- <div class="show-versions-wrap" fxLayout="row" fxLayoutAlign="end center" fxFlex>
+        <button class="show-versions-button" mat-button (click)="openDoctagversionsDialog(selectedDoctagId)" fxFlex>Show Versions</button>
+        <button class="add-topic-button" mat-stroked-button (click)="showTopicFormDialog()" fxFlex><i class="material-icons">add</i>Add Topic</button>
+      </div> -->
+  </div>
+
+  <mat-form-field class="filter-form" *ngIf="selectedDoctagId" fxFlex>
+    <input matInput [(ngModel)]="filtering" (ngModelChange)="applyFilter($event)" placeholder="Search examples here !">
+  </mat-form-field>
+
+  <div class="table-wrap" fxLayout="column" fxLayoutAlign=" stretch" fxFlex>
+
+    <table mat-table [dataSource]="topics" matSort matSortActive="Title" matSortDirection="asc" matSortDisableClear
+      class="mat-elevation-z8" [ngClass]="topics ? 'visible': 'hidden'" fxFlex>
+
+      <ng-container matColumnDef="Title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+        <td mat-cell *matCellDef="let element" (click)="navigateToTopic(element.Id)"> {{ element.Title }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="CreationDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Creation Date </th>
+        <td mat-cell *matCellDef="let element"> {{ element.CreationDate | formatDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ViewCount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> View Count </th>
+        <td mat-cell *matCellDef="let element"> {{ element.ViewCount }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <i class="material-icons" (click)="navigateToTopic(element.Id)">visibility</i>
+          <i class="material-icons">edit</i>
+          <div class="spinner mr-1" appDelete (holdTime)="holdHandler($event, element.Id)">
+            <svg class="progress" width="35" height="35" viewBox="0 0 30 30">
+              <circle cx="15" cy="15" r="13" fill="none" stroke-width=".75" />
+              <circle class="progress_value" cx="15" cy="15" r="13" fill="none" stroke="#f44336" stroke-width="3" />
+            </svg>
+            <i class="material-icons">delete</i>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator *ngIf="selectedDoctagId" [length]="topicsListLength" [pageSize]="topicsPageSize"
+      [pageIndex]="topicsPageIndex" [pageSizeOptions]="topicsPageSizeOptions"
+      (page)="topicsPageEvent = onTopicsPageChange($event)" fxFlex>
+    </mat-paginator>
+
+  </div>
+</div>

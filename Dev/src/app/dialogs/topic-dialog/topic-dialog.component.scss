@@ -1,0 +1,71 @@
+mat-card{
+    width: 40vw;
+    height: 300px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.error {
+  color: red;
+}
+.error-msg {
+  display: block;
+  position: absolute;
+  font-size: 75%;
+  bottom: -2em;
+}
+.mat-input-container {
+  margin-bottom: .5em;
+}
+#close3{
+  float: right;
+  cursor: pointer;
+}
+#close3:hover{
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  opacity: 0.3;
+}
+::ng-deep .mat-dialog-container{
+  padding: 0;
+  overflow: inherit;
+  width: 90%
+}
+.mat-card{
+  width:100%;
+  min-height: 87vh;
+  overflow: hidden;
+}
+::ng-deep .mat-form-field-infix{
+  border-top: 0.4075em solid transparent;
+}
+::ng-deep .ng-star-inserted{
+  margin: 0;
+}
+ .mat-form-field{
+  width: 200px;
+}
+
+::ng-deep textarea.mat-input-element{
+ max-height: 55vh;
+ min-height: 50vh;
+  background-color: whitesmoke;
+}
+.textbox{
+  width: 80vw;
+  padding: 10px;
+}
+
+::ng-deep textarea.mat-input-element {
+  width: 90%;
+}
+.card{
+  padding: 0;
+  margin: 0 !important;
+}
+
+ .mat-card-content{
+  margin: 0;
+}

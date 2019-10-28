@@ -1,0 +1,26 @@
+<mat-card>
+    <i class="material-icons" id="close2" (click)="closeExampleDial()">
+        close
+        </i>
+    <mat-card-title>Add Example</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="examplesForm">
+        <mat-form-field>
+          <input type="text" matInput formControlName="title" placeholder="Title" required>
+          <mat-error *ngIf="examplesForm.controls['title'].hasError"> Title is invalid </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput formControlName="bodyHtml" placeholder="Body Html" required>
+          <mat-error *ngIf="examplesForm.controls['bodyHtml'].hasError"> Tag is invalid </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput formControlName="bodyMarkdown" placeholder="Body Markdown" required>
+            <mat-error *ngIf="examplesForm.controls['bodyMarkdown'].hasError"> Tag is invalid </mat-error>
+          </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button [disabled]="examplesForm.invalid" mat-raised-button class="btn"(click)="submitExample()" color="primary">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+  

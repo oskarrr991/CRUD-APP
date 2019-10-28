@@ -1,0 +1,27 @@
+footer {
+    // pause: 1000ms;
+    background-color: #242729;
+    height: 175px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    span {
+        display: block;
+        font-size: 20px;
+    }
+    svg {
+        padding: 15px;
+        padding-top: 25px;
+        cursor: pointer;
+    }
+}
+#main {
+    margin-bottom: 400px;
+}
+// @media (min-height: 1000px){
+//     #main {
+//         margin-bottom: 230px;
+//     }
+// }

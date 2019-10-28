@@ -1,0 +1,41 @@
+<mat-card>
+  <i class="material-icons" id="close2" (click)="closeEditExampleDialog()">
+      close
+      </i>
+  <mat-card-title>Edit Example</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="editExampleForm">
+      <mat-form-field>
+        <input matInput formControlName="title" placeholder="Title" [value]=data.exampleTitle required>
+        <mat-error *ngIf="editExampleForm.controls['title'].hasError"> Title is invalid </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput
+                  formControlName="bodyHtml"
+                  placeholder="Body HTML"
+                  [value]=data.exampleBody
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="16"
+                  required></textarea>
+        <mat-error *ngIf="editExampleForm.controls['bodyHtml'].hasError"> Body HTML is invalid </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput
+                  formControlName="bodyMarkdown"
+                  placeholder="Body Markdown"
+                  [value]=data.exampleMarkdown
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="16"
+                  required></textarea>
+        <mat-error *ngIf="editExampleForm.controls['bodyMarkdown'].hasError"> Body Markdown is invalid </mat-error>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="center">
+    <button mat-raised-button class="btn" (click)="submitEditExample()" color="primary">Submit</button>
+  </mat-card-actions>
+</mat-card>

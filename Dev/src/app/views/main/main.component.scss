@@ -1,0 +1,193 @@
+.search-bar-wraper {
+    width: 65vw;
+    margin-top: 150px;
+    margin-bottom: 24px;
+}
+
+.example-form {
+    width: 60%;
+    padding-right: 16px;
+}
+
+.search-bar {
+    width: 100%;
+    // Search-bar placeholder position verticaly centered;
+    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 1em 0 1.3em .3em;
+    }
+
+    // Search-bar had a padding-bottom of 1.34375em that affected vertical centering. 
+    ::ng-deep .mat-form-field-wrapper {
+        padding-bottom: 0;
+    }
+}
+
+// ::ng-deep .ng-star-inserted {
+//     margin-left: 0px;
+// }
+
+.add-doctag-button {
+    height: 50px;
+    max-width: 160px;
+}
+
+.add-doctag-button:hover {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.hero-wrap {
+    width: 65vw;
+    height: 40vh;
+}
+
+.hero-text {
+    width: 70%;
+    text-align: center;
+}
+
+.hero-image {
+    width: 5%;
+    height: auto;
+    margin-top: 24px;
+}
+
+.show-doctags-wraper {
+    width: 65vw;
+    margin-bottom: 24px;
+}
+
+.selected-topic-h1 {
+    min-width: 60%;
+}
+
+// .show-versions-button {
+//     max-width: 140px;
+//     margin-right: 4px;
+// }
+
+.add-topic-button {
+    max-width: 140px;
+    .material-icons {
+        opacity: 1;
+        font-size: 18px;
+    }
+}
+
+.add-topic-button:hover {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.table-wrap {
+    width: 65vw;
+    // box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    margin-bottom: 24px;
+    .material-icons {
+        opacity: 0.6;
+        padding: 2px;
+    }
+    .material-icons:hover {
+        opacity: 1;
+        color: #3f51b5;
+    }
+    #icon-delete:hover {
+        opacity: 1;
+        color: #f44336;
+    }
+
+    position: relative !important;
+    margin-bottom: 100px;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+
+}
+
+// Table paginator styled;
+::ng-deep .mat-paginator {
+    width: 100%;
+}
+
+// Table width. Took off box-shadow and applied it to .table-wrap to style both table and paginator;
+.mat-elevation-z8 {
+    width: 100%;
+    box-shadow: none;
+}
+
+// Table revealed/hidden with this class instead "ngIf";
+table.hidden {
+    display: none;
+}
+
+// box-shadow on the table appears based on [ngClass]
+.visibleBoxShadow {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.hiddenBoxShadow {
+    box-shadow: none;
+}
+
+tr {
+    cursor: pointer;
+}
+
+.topicsData:hover {
+    background-color: grey;
+}
+
+.loading {
+    max-width: 30%;
+}
+
+.langs {
+    margin-top: 5px;
+    width: 100vw;
+}
+
+.langEn {
+    float: right;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.langLt {
+    margin-left: 5px;
+    float: right;
+}
+
+.spinner {
+    width: 35px;
+    height: 35px;
+    position:relative;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .spinner > .material-icons {
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    color: #00303d;
+    z-index: -1;
+  }
+
+  .progress {
+    transform: rotate(-90deg);
+  }
+
+  .progress_value {
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+  }
+
+  .spinner :active> .progress_value
+  {
+      animation: progress 5.8s ease-out;
+  }
+
+  @keyframes progress {
+    0% {
+      stroke-dashoffset: 339.292;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+}

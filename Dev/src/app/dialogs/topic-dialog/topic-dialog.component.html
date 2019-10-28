@@ -1,0 +1,73 @@
+<mat-card >
+    <i class="material-icons" id="close3" (click)="closeTopicDial()">
+        close
+        </i>
+  <mat-card-title>Add Topic  </mat-card-title>
+  <mat-card-content >
+    <form [formGroup]="topicForm" id="form"  >
+      <mat-form-field [fxFlex.xs]="12" >
+        <input type="text" matInput formControlName="title" placeholder="Topic title" required  >
+        <mat-error *ngIf="topicForm.controls['title'].hasError"> Topic title is invalid </mat-error>
+      </mat-form-field >
+      <mat-tab-group dynamicHeight  > 
+          <mat-tab label="Introduction Html">
+              <mat-form-field class="textbox"  >
+                <textarea matInput placeholder="Introduction Html" formControlName="introductionHtml" required ></textarea>
+                <mat-error *ngIf="topicForm.controls['introductionHtml'].hasError">  Tag is invalid </mat-error>
+              </mat-form-field>
+            </mat-tab>
+        <mat-tab label="Syntax Html">
+          <mat-form-field class="textbox" >
+            <textarea matInput placeholder="Syntax Html" formControlName="syntaxHtml" required ></textarea>
+            <mat-error *ngIf="topicForm.controls['syntaxHtml'].hasError">  Tag is invalid </mat-error>
+          </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Parameters Html">
+          <mat-form-field class="textbox" >
+            <textarea matInput placeholder="Parameters Html" formControlName="parametersHtml" required ></textarea>
+            <mat-error *ngIf="topicForm.controls['parametersHtml'].hasError"> Tag is invalid </mat-error>
+          </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Remarks Html">
+          <mat-form-field class="textbox" >
+            <textarea matInput placeholder="Remarks Html" formControlName="remarksHtml" required ></textarea>
+            <mat-error *ngIf="topicForm.controls['remarksHtml'].hasError"> Tag is invalid </mat-error>
+          </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Introduction Markdown">
+          <mat-form-field class="textbox" >
+            <textarea matInput placeholder="Introduction Markdown" formControlName="introductionMarkdown" required ></textarea>
+            <mat-error *ngIf="topicForm.controls['introductionMarkdown'].hasError"> Tag is invalid </mat-error>
+          </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Syntax Markdown">
+          <mat-form-field class="textbox" >
+            <textarea matInput placeholder="Syntax Markdown" formControlName="syntaxMarkdown" required  ></textarea>
+            <mat-error *ngIf="topicForm.controls['syntaxMarkdown'].hasError"> Tag is invalid </mat-error>
+          </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Parameters Markdown">
+            <mat-form-field class="textbox" >
+              <textarea matInput placeholder="Parameters Markdown" formControlName="parametersMarkdown" required  ></textarea>
+              <mat-error *ngIf="topicForm.controls['parametersMarkdown'].hasError"> Tag is invalid </mat-error>
+            </mat-form-field>
+          </mat-tab>
+        <mat-tab label="Remarks Markdown">
+          <mat-form-field class="textbox" >
+            <textarea matInput placeholder="Remarks Markdown" formControlName="remarksMarkdown" required ></textarea>
+            <mat-error *ngIf="topicForm.controls['remarksMarkdown'].hasError"> Tag is invalid </mat-error>
+          </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Hello World Versions Html">
+          <mat-form-field class="textbox" >
+            <textarea matInput placeholder="Hello World Versions Html" formControlName="helloWorldVersionsHtml" required ></textarea>
+            <mat-error *ngIf="topicForm.controls['helloWorldVersionsHtml'].hasError"> Tag is invalid </mat-error>
+          </mat-form-field>
+        </mat-tab>
+      </mat-tab-group>
+    </form>
+  </mat-card-content>
+    <mat-card-actions class="card" align="end">
+      <button [disabled]="topicForm.invalid" mat-raised-button class="btn"(click)="submitTopic()" color="primary">Submit</button>
+    </mat-card-actions>
+</mat-card>

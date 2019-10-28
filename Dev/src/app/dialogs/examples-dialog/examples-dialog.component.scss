@@ -1,0 +1,25 @@
+#close2{
+    float: right;
+    cursor: pointer;
+  }
+
+  #close2:hover{
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    opacity: 0.3;
+  }
+  
+  ::ng-deep .mat-dialog-container{
+    padding: 0;
+  }
+
+  .mat-form-field{
+      display: block;
+      width: 300px
+  }
+
+  .mat-card {
+    width: 300px;
+  }
+  

@@ -1,0 +1,40 @@
+mat-card{
+    width: 40vw;
+    height: 300px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.error {
+  color: red;
+}
+.error-msg {
+  display: block;
+  position: absolute;
+  font-size: 75%;
+  bottom: -2em;
+}
+.mat-input-container {
+  margin-bottom: .5em;
+}
+#close1{
+  float: right;
+  cursor: pointer;
+}
+#close1:hover{
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  opacity: 0.3;
+}
+::ng-deep .mat-dialog-container{
+  padding: 0;
+}
+ .mat-card{
+  width: 35vw;
+  height: 210px;
+}
+::ng-deep .ng-star-inserted{
+  margin: 0px;
+}

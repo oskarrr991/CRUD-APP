@@ -1,0 +1,16 @@
+.logo{
+    padding-bottom: 2rem;
+    background-color: RGBA(0,0,0,0.09);
+    .image{
+        max-width: 400px;
+        cursor: pointer;
+        filter: gray;
+        -webkit-filter: grayscale(100%);
+        outline: none;
+    }
+    .image:hover{
+        filter: none;
+        transition: all 1s;
+    }
+}
+

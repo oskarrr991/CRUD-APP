@@ -2,7 +2,7 @@
 Data dump is downloaded from here https://archive.org/details/stackexchange<br/> 
 Tables that contain the data are created with help of MySQL and node.js<br/>
 With help of express js, data is transfered/added/deleted/updated in the tables<br/>
-With help of http client in frontend, data is passed to backend in index.js<br/>
+With help of http client in frontend, data actions are passed to backend in index.js<br/>
 Directives, components, pipes, dialogs, models and services are used in this project<br/>
 
 ## Some screenshots of the APP<br/> 

@@ -2,11 +2,11 @@
 
 ## Some screenshots of the APP<br/> 
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/1.png)<br/> 
-Finding a topic<br/> 
+Finding a topic
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/2.png)
-Choosing example<br/> 
+Choosing example
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/3.png)
-...or searching it<br/> 
+...or searching it
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/4.png)
 From here user can read, delete or add a new example<br/> 
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/5.png)
@@ -18,3 +18,6 @@ Adding topic...
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/8.png)
 ...or a doctag
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/9.png)
+Object model interaction
+![image](https://github.com/oskarrr991/CRUD-APP/blob/master/10.jpg)
+

@@ -1,7 +1,9 @@
 # CRUD-APP
 
 ## Some screenshots of the APP<br/> 
-![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/1.png)
+![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/1.png)<br/> 
+Finding a topic<br/> 
+
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/2.png)
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/3.png)
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/4.png)

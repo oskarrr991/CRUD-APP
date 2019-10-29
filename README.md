@@ -14,7 +14,7 @@ From here user can read, delete or add a new example<br/>
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/6.png)
 Deleting topic by holding the delete button<br/> 
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/7.jpg)
-Adding Topic...
+Adding topic...
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/8.png)
 ...or a doctag
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/9.png)

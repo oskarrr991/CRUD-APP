@@ -10,7 +10,7 @@ Directives, components, pipes, dialogs, models and services are used in this pro
 Finding a topic
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/2.png)
 Choosing example
-![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/3.png)
+![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/3.png) 
 ...or searching it
 ![image](https://github.com/oskarrr991/CRUD-APP/blob/master/screenshots/4.png)
 From here user can read, delete or add a new example<br/> 
